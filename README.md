@@ -1,4 +1,4 @@
-# Title
+# Celtic Technical Striker Brief
 
 ## Project Overview
 
@@ -79,8 +79,8 @@
     * I then placed a set of `()`, along with a  set of `''` and a pair of  `+`, that had spaces around them.
     * Inbetweeen them I called the `DataFrame ['Name']` and `Column ['Team']`.
 * Then i plotted the line. I used `plt.plot()`:
-    * I called the variable `players_team`,
-    * Then i called the `(DataFrame)['Touches In Box']` to plot
+    * I called the variable `players_team` for the x-axis,
+    * Then i called the `(DataFrame)['Touches In Box']` to plot the y-axis,
     * I plotted the marker & line stlye along with the color `o` for the shape, `--` for a dotted line, `w` for white color.
     *  Then i change the marker size with `ms=6`.
     *  Finally i changed the marker edge color with `mec='w'`.
@@ -89,7 +89,7 @@
    * I then plotted the marker with `plt.scatter`.
    * I used `iloc` on the `players_team` variable and then used `top_player` variable for the x-axis to find the position. Next I called the DataFrame along with the `['Touches In Box']` & used `.iloc` with the `top_player` variable to match with the DataFrame values.
    * I styled the marker with `marker = '*', its size with `s=300`, i changed the color & edge color with `color='yellow` & `edgecolor='w'`, and finally used `zorder=5` to determine what level of the graph to set the marker.
-* I created the xlabel,yalbel and title with `plt` and added the writing inside `''` and boldened the text with `fontweight = 'bold'`.
+* I created the x label, y label and title with `plt` and added the writing inside `''` and boldened the text with `fontweight = 'bold'`.
 * The grid was shown using `plt.grid()` function.
 * I moved the values on the x-axis to fit the using `plt.xticks()` function and adding `rotation=45` to turn the text then moved it across with `ha='right'` *Horizontal Alignment*, all inside `()`.
 * Then displayed the figure with `plt.show()`.
@@ -97,165 +97,206 @@
 
 <img width="860" height="633" alt="Image" src="https://github.com/user-attachments/assets/8eece235-a225-4096-9dc7-34f40eca1a02" />
 
-* `Sekou Koita` is the `outright winner` in this group and should be considered if `controlling possession inside the box` is the style of football that is wanted to be played.
+* `Sekou Koita (Salzburg)` is the `outright winner` in this group and should be considered if `controlling possession inside the box` is the style of football that is wanted to be played.
 
 ## Goals & Penalty Goals Graph
 ### Graph Code
 
 <img width="1196" height="797" alt="Image" src="https://github.com/user-attachments/assets/84c98aab-31d0-4c32-886e-1cdc9f4c32fa" />
 
-*
+* I created a variable to house data from selected columns then used the `copy()` function so that any changes wouldnrt affect the original DataFrame.
+* I used the same structure for labeling the x-axis with players name and team. However i created an new column in the DataFrame, calling the DataFrame and new column name `gls_plot['Players Team']`. Following this is the same syntax to create the x-axis labels.
+* Plotting the figure, axes and background color are the same.
+* To plot the bar chart. I created a varaible `bars`and used `plt.bar()` function. Inside the function used, calling the x-axis column `Players Team` , then the y-axis is called using the column `Goals & Penalty Goals`. Then the bar color is selcted `color='white'`.
+* I also used the same syntax to highlight the best player like the previous graph, just using `bars` instead of `plt.scatter`.
+* I then wanted to annotate the bars as to give more of an understanding of what value the bars represented. I did this by:
+    * Using the `ax` variable with `bar_label()` function.
+    * Inside the `()`, I called the `bars` variable to select the bars,
+    * I then made a variable called `labels`, I followed it with `[]`, inside the brackets I used an `f""` string, where i placed `(val:.2f)`, which put all values at 2 decimal places,
+    * I then used a `For Loop` to add the value set above to every value on each bar,
+    * I then set the where the label would be shown with `label_type='center`,
+    * Finally i boldened the text with `fontweight='bold'`.
+* The final set of stylings and code are the same as the previous graphs.
 
 ### Graph Outcome
 
 <img width="818" height="729" alt="Image" src="https://github.com/user-attachments/assets/6c2318fe-9579-4b0d-bbff-7b4cfbd92af3" />
 
-*
+* `Torgrir Brven (Odd)` had the highest Goals and Penalty Goals, so would of suited to be a goal threat out of the top 5 in this attribute.
 
 --------------------------------
 
 ### Aerial Wins Code
 <img width="800" height="508" alt="Image" src="https://github.com/user-attachments/assets/6fffae95-2cae-4880-a6af-6cf2f107f100" />
 
-*
+* This code is the same as `Touches In The Box Code` with column changed to `Aerial Wins`.
 
-### Ariel Wins Percentile Code
+### Aeriel Wins Percentile Code
 <img width="985" height="613" alt="Image" src="https://github.com/user-attachments/assets/82a6e83e-8c1a-41d5-a90b-b3df2d2fed57" />
 
-*
+* This code is the same as `Touches In The Box Percentile Code`.
 
 ### Aerial Wins % Code
 <img width="613" height="452" alt="Image" src="https://github.com/user-attachments/assets/ca896415-7acd-4625-a481-2e81421afb87" />
 
-### Ariel Wins % Percentile Code
+* This code is the same as `Touches In The Box Code` with column changed to `Aerial Wins %`.
+
+### Aeriel Wins % Percentile Code
 <img width="1062" height="585" alt="Image" src="https://github.com/user-attachments/assets/11284fff-61c0-4eb9-94cb-3f98090385ce" />
 
+* This code is the same as `Touches In The Box Percentile Code`.
 
-## Ariel Wins Graph
-
+## Aeriel Wins Graph
 ### Graph Code
 <img width="1212" height="639" alt="Image" src="https://github.com/user-attachments/assets/e67c0991-ad37-4576-92c4-29b74184c025" />
+
+* This code is the same as `Touches In The Box Graph Code`.
 
 ### Graph Outcome
 <img width="827" height="741" alt="Image" src="https://github.com/user-attachments/assets/64b94d53-84ca-4190-9ed0-cca82d05eabb" />
 
-*
+* `Gustavo Javier Alles Villa (Universidad Concepcin)` is the best player if the play style is to play `long passes` up filed to be knocked on or have more advantage challenging for possession. Also gain adavanatage at 'set pieces`.
 
-## Ariel Wins % Graph
+## Aeriel Wins % Graph
 ### Graph Code
 <img width="1196" height="777" alt="Image" src="https://github.com/user-attachments/assets/c0370a4a-d578-4e50-8744-da16d8a8064a" />
 
-*
+* This code is the same as `Players Goals & Penalty Goals`.
 
 ### Graph Outcome
 <img width="777" height="744" alt="Image" src="https://github.com/user-attachments/assets/e524b21f-a8db-4324-a065-de7689a57cef" />
+
+* `Cristian Benavente (Antwerp)` is shown to be the highest in this attribute, however looking at the previous graph, he made the least amount of `aerial wins` so this skews the value. The pick should remain with `Gustavo Javier Alles Villa (Universidad Concepcin)` as his `%` value is around the same as the other players who scored high `aerial wins`.
 
 ----------------------------
 
 ### Open Play - Final Third Passes Code
 <img width="794" height="498" alt="Image" src="https://github.com/user-attachments/assets/f5d1f644-f1a1-4b3f-9793-6e1f82990a2c" />
 
+* This code is the same as `Touches In The Box Code` with column changed to `Open Play Final Third Passes`.
+
 ### Open Play - Final Third Passes Percentile Code
 <img width="1411" height="599" alt="Image" src="https://github.com/user-attachments/assets/cffd79fe-2dfa-4674-b2e0-1b610720b06c" />
 
+* This code is the same as `Touches In The Box Percentile Code`.
 
 ## Open Play - Final Third Passes Graph
 ### Graph Code
 <img width="1209" height="804" alt="Image" src="https://github.com/user-attachments/assets/6181418d-a5f4-460d-a9bc-0ceeef675a2b" />
 
-*
+* This code is the same as `Players Goals & Penalty Goals`.
 
 ### Graph Outcome
 <img width="790" height="722" alt="Image" src="https://github.com/user-attachments/assets/cbaa5034-4493-462e-89ee-e4768abb1e62" />
-
+ 
+* `Antoine Griezmann (Barcelona)` is the clear winner. His values show he is the best at playing a pass in the `final third` which can strengthen `attacking output` for the team.
 
 ### Open Play - Passes Into Box Code
 <img width="855" height="504" alt="Image" src="https://github.com/user-attachments/assets/2e22c621-101e-4107-99b7-54084e18d773" />
 
-*
+* This code is the same as `Touches In The Box Code` with column changed to `OP Passes Into Box`.
 
 ### Open Play - Passes Into Box Percentile Code
 <img width="1403" height="574" alt="Image" src="https://github.com/user-attachments/assets/59daa2b0-462a-4960-a12e-332ed5139527" />
 
-*
+* This code is the same as `Touches In The Box Percentile Code`.
 
 ## Open Play - Passes Into Box Graph
 ### Graph Code
 <img width="1212" height="641" alt="Image" src="https://github.com/user-attachments/assets/90086109-e260-492f-b8b3-68adc5daa002" />
 
-*
+* This code is the same as `Touches In The Box Graph Code`.
 
 ### Graph Outcome
 <img width="784" height="768" alt="Image" src="https://github.com/user-attachments/assets/08bd7783-e330-41fd-aa4d-8b4b5db3f7da" />
 
-*
+* `Munas Deabbur (Hoffenheim)` plays the most amount of `passes into the box`, which can greatly effect the possibility of winning set pieces along with scoring more goals. 
 
 -------------------------------
 
 ### Passes + Touches In Box Code
 <img width="630" height="441" alt="Image" src="https://github.com/user-attachments/assets/51745426-c6c9-43dc-8c8d-f1eb2327ca58" />
 
-*
+* This code is the same as `Touches In The Box Code` with column changed to `Passes + Touches`.
 
 ### Passes + Touches In Box Percentile Code
 <img width="1269" height="581" alt="Image" src="https://github.com/user-attachments/assets/7976d9ca-03e9-48b2-a485-c641748f3368" />
 
-*
+* This code is the same as `Touches In The Box Percentile Code`.
 
 ## Passes + Touches In Box Graph
 ### Graph Code
 <img width="1197" height="773" alt="Image" src="https://github.com/user-attachments/assets/9b48f7d3-d919-45c8-b6ae-2830d915551a" />
 
+* This code is the same as `Players Goals & Penalty Goals`.
+
 ### Graph Outcome
 <img width="781" height="750" alt="Image" src="https://github.com/user-attachments/assets/93a3d807-4cde-4788-80b8-1a240fbce806" />
 
+* `Walter Bwalya (Al Ahly SC)` has the most `Touches + Passes In Box`. This is a great strength to have that as it greatly improves composure and pressure inside the opponents penalty area.
+ 
 ------------------------
 
 ## Willing To Defend From The Front
 ### Counterpressures In Opposing Half Code
 <img width="830" height="546" alt="Image" src="https://github.com/user-attachments/assets/8ad9e77e-513e-42e9-b4cd-77576e3ca0d4" />
 
+* This code is the same as `Touxhes In The Box` with column changed to `Counterpressures In Opposing Half`.
+
 ### Counterpressures In Opposing Half Percentile Code
 <img width="1428" height="592" alt="Image" src="https://github.com/user-attachments/assets/d09fe1e1-a7db-4c1b-80cb-03de86d2bb07" />
 
+* This code is the same as `Touches In The Box Percentile Code`.
 
 ## Counterpressures In Opposing Half Graph
 ### Graph Code
 <img width="1188" height="803" alt="Image" src="https://github.com/user-attachments/assets/15af7ae6-ec64-48c1-a6ce-a7df54274be3" />
 
+* This code is the same as `Players Goals & Penalty Goals`.
+
 ### Graph Outcome
 <img width="796" height="600" alt="Image" src="https://github.com/user-attachments/assets/016322de-4e91-4a74-93ef-428f187f7c2c" />
 
-*
+* `Soma Novothny (Bochum)` is the player that has the most `counterpressures in opposing half`. This is a great attribute to be proficent in as it allows `possession to be won back high up the field` and put the opposition under pressure.
 
 ### Pressures In Opposing Half Code
 <img width="801" height="477" alt="Image" src="https://github.com/user-attachments/assets/8c9f1501-b012-4784-80db-81d424223287" />
 
-*
+* This code is the same as `Touxhes In The Box` with column changed to `Pressures In Opposing Half`.
 
 ### Pressures In Opposing Half Percentile Code
 <img width="1404" height="611" alt="Image" src="https://github.com/user-attachments/assets/2be2a77f-0763-4874-9fb1-7b6598641afd" />
 
-*
+* This code is the same as `Touches In The Box Percentile Code`.
 
 ## Pressures In Opposing Half Graph
 ### Graph Code
 <img width="1203" height="614" alt="Image" src="https://github.com/user-attachments/assets/cb730541-0d3c-4c0f-81ff-8f9e84c03f92" />
 
-*
+* This code is the same as `Touches In The Box Graph Code`.
 
 ### Graph Outcome
 <img width="786" height="721" alt="Image" src="https://github.com/user-attachments/assets/b14f365d-47fd-4cac-b422-4e71e9c679c3" />
 
-*
+* `Alibek Aliev (Varberg)` presses the most into the oppenents half. Much like the counterpresses, it is a strong attribute to have, as pressing can cause mistakes and over turn possession and create counter attacks. 
 
 ---------------------
 
 ##  Combined DataFrame
 <img width="1650" height="399" alt="Image" src="https://github.com/user-attachments/assets/64b552b6-2cf5-42f5-bc37-a4235f51503f" />
 
+* I created a varaible to store all the `percentile rank` DataFrames.
+* Next I created another variable and used `pd.concat()` on the previous variable to combine all the DataFrames.
+* I used `dot notation` to `.drop_dupicates()` and to only show the top 5 results `.head(5)`.
+* Then called the variable to show show the output.
+
+* The ideal pick would be `Munas Babbur - Hoffenheim`. Majority of his percentiles are above `70`, with the lowest being `20` for `Aerial Wins` & `Aerial Wins %` and `Touches In Box` being `40`.
+* There are attributes that can be worked on the improve the player while the attributes they already are stong at can improve the team.
+
 -------------------------
 ## Convert DataFrame To Excel
 <img width="409" height="126" alt="Image" src="https://github.com/user-attachments/assets/3f163185-e3e2-402c-b472-0b59aa7083f6" />
+
+* Convert the output so it is able to be viewed in Excel spreadsheet
 
 
